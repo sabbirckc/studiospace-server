@@ -147,9 +147,9 @@ const SAMPLE_STUDIOS = [
     securityDeposit: 200,
     maxCapacity: 20,
     location: 'West Loop Industrial Corridor, Chicago, IL',
-    imageUrl: 'https://images.unsplash.com/photo-1520523839898-507125cd53c1?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=1200&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1520523839898-507125cd53c1?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=80'
     ],
     amenities: [
@@ -308,3 +308,4 @@ async function seedDatabase() {
 }
 
 seedDatabase();
+
