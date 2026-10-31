@@ -1,31 +1,79 @@
-import express from 'express'
-import { MongoClient } from 'mongodb';
-import 'dotenv/config'
-const app = express()
-const PORT = 8000
+import express from 'express';
+import cors from 'cors';
+import cookieParser from 'cookie-parser';
+import 'dotenv/config';
 
-const client = new MongoClient(process.env.MONGODB_URL);
+import { connectDB } from './db.js';
+import authRoutes from './routes/auth.js';
+import studiosRoutes from './routes/studios.js';
+import bookingsRoutes from './routes/bookings.js';
+import wishlistRoutes from './routes/wishlist.js';
 
-export async function connectToMongoDB() {
-    try {
-        await client.connect();
-        console.log("You successfully connected to MongoDB!");
-        return client;
-    } catch (err) {
-        console.dir(err);
+const app = express();
+const PORT = process.env.PORT || 8000;
+
+// Allowed origins
+const allowedOrigins = [
+  'http://localhost:3000',
+  process.env.CLIENT_URL
+].filter(Boolean);
+
+app.use(cors({
+  origin: (origin, callback) => {
+    // allow requests with no origin (like mobile apps or curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
+      return callback(null, true);
     }
+    return callback(null, true); // Dev-friendly fallback
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+app.use(cookieParser());
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
+// Health check endpoint
+app.get('/', (req, res) => {
+  res.json({
+    status: 'healthy',
+    message: 'StudioSpace Production Engine API is running smoothly.',
+    timestamp: new Date().toISOString()
+  });
+});
+
+// Mount modular API routes
+app.use('/api/auth', authRoutes);
+app.use('/api/studios', studiosRoutes);
+app.use('/api/bookings', bookingsRoutes);
+app.use('/api/wishlist', wishlistRoutes);
+
+// 404 Handler for API
+app.use((req, res) => {
+  res.status(404).json({ success: false, error: 'Endpoint route not found.' });
+});
+
+// Global Error Handler
+app.use((err, req, res, next) => {
+  console.error('Unhandled Server Error:', err);
+  res.status(500).json({ success: false, error: 'Internal Server Error' });
+});
+
+// Start Server and connect Database
+async function startServer() {
+  try {
+    await connectDB();
+    app.listen(PORT, () => {
+      console.log(`StudioSpace Server is running on port ${PORT}`);
+      console.log(`API URL: http://localhost:${PORT}`);
+    });
+  } catch (err) {
+    console.error('Failed to initialize MongoDB connection:', err);
+    process.exit(1);
+  }
 }
 
-connectToMongoDB()
-
-
-//http://localhost:8000
-
-app.get('/', (req, res) => {
-    res.send({ message: 'Server is running fine!' })
-})
-
-
-app.listen(PORT, () => {
-    console.log(`Server is running at ${PORT}`)
-})
+startServer();
