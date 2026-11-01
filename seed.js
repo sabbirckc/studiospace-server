@@ -10,10 +10,10 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 250,
     maxCapacity: 25,
     location: 'DUMBO Creative Quarter, Brooklyn, NY',
-    imageUrl: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/image-1.png',
     gallery: [
-      'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80'
+      '/image-1.png',
+      '/image-2.png'
     ],
     amenities: [
       'Two-Wall Infinity Cyclorama',
@@ -37,10 +37,10 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 200,
     maxCapacity: 20,
     location: 'West Loop Industrial Corridor, Chicago, IL',
-    imageUrl: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/image-2.png',
     gallery: [
-      'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80'
+      '/image-2.png',
+      '/image-1.png'
     ],
     amenities: [
       'Exposed Vintage Cream Brick Walls',
@@ -64,10 +64,10 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 500,
     maxCapacity: 60,
     location: 'Arts District Production Hub, Los Angeles, CA',
-    imageUrl: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/image-3.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?auto=format&fit=crop&w=1200&q=80'
+      '/image-3.jpg',
+      '/image-4.avif'
     ],
     amenities: [
       'STC-60 Soundproofing',
@@ -91,10 +91,10 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 750,
     maxCapacity: 45,
     location: 'Midtown Innovation Hub, Atlanta, GA',
-    imageUrl: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/image-4.avif',
     gallery: [
-      'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=80'
+      '/image-4.avif',
+      '/image-3.jpg'
     ],
     amenities: [
       'ROE Visual 2.6mm Curved LED Wall',
@@ -118,10 +118,10 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 150,
     maxCapacity: 8,
     location: 'SoHo Broadcast Commons, New York, NY',
-    imageUrl: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/image-5.png',
     gallery: [
-      'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=1200&q=80'
+      '/image-5.png',
+      '/image-6.jpeg'
     ],
     amenities: [
       '4x Shure SM7B Broadcast Mics',
@@ -145,10 +145,10 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 120,
     maxCapacity: 6,
     location: 'West End Media Park, Nashville, TN',
-    imageUrl: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/image-6.jpeg',
     gallery: [
-      'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=80'
+      '/image-6.jpeg',
+      '/image-5.png'
     ],
     amenities: [
       'Cloudlifter CL-4 Mic Activator',
@@ -171,10 +171,10 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 300,
     maxCapacity: 12,
     location: 'East Austin Creative Belt, Austin, TX',
-    imageUrl: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/image-7.jpeg',
     gallery: [
-      'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80'
+      '/image-7.jpeg',
+      '/image-8.jpeg'
     ],
     amenities: [
       'Genelec 7.1.4 Dolby Atmos Rig',
@@ -198,10 +198,10 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 200,
     maxCapacity: 6,
     location: 'Capitol Hill Arts Quarter, Seattle, WA',
-    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/image-8.jpeg',
     gallery: [
-      'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80'
+      '/image-8.jpeg',
+      '/image-7.jpeg'
     ],
     amenities: [
       'Double-Walled WhisperRoom Iso Booth',
@@ -225,10 +225,10 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 100,
     maxCapacity: 18,
     location: 'Mission District Arts District, San Francisco, CA',
-    imageUrl: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/image-1.png',
     gallery: [
-      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1200&q=80'
+      '/image-1.png',
+      '/image-3.jpg'
     ],
     amenities: [
       '6x Shimpo Pottery Wheels',
@@ -252,10 +252,10 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 100,
     maxCapacity: 16,
     location: 'Beacon Arts Loft, Boston, MA',
-    imageUrl: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: '/image-2.png',
     gallery: [
-      'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=1200&q=80'
+      '/image-2.png',
+      '/image-4.avif'
     ],
     amenities: [
       'Heavy-Duty French Master Easels',
