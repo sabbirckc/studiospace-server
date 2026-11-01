@@ -10,9 +10,9 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 250,
     maxCapacity: 25,
     location: 'DUMBO Creative Quarter, Brooklyn, NY',
-    imageUrl: '/image-1.png',
+    imageUrl: '/aperture-one.jpg',
     gallery: [
-      '/image-1.png',
+      '/aperture-one.jpg',
       '/image-2.png'
     ],
     amenities: [
