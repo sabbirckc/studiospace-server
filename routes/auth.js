@@ -136,10 +136,42 @@ router.post('/login', async (req, res) => {
 // Social Login (Google)
 router.post('/social-login', async (req, res) => {
   try {
-    const { name, email, photoURL } = req.body;
+    let { name, email, photoURL, credential, access_token } = req.body;
+
+    // 1. If Google ID token (credential) is passed, verify with Google
+    if (credential) {
+      try {
+        const verifyRes = await fetch(`https://oauth2.googleapis.com/tokeninfo?id_token=${credential}`);
+        if (verifyRes.ok) {
+          const payload = await verifyRes.json();
+          email = payload.email || email;
+          name = payload.name || name || payload.given_name;
+          photoURL = payload.picture || photoURL;
+        }
+      } catch (tokenErr) {
+        console.warn('Google token verification fallback:', tokenErr.message);
+      }
+    }
+
+    // 2. If Google OAuth2 access_token is passed, fetch user info from Google
+    if (access_token && !email) {
+      try {
+        const userInfoRes = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+          headers: { Authorization: `Bearer ${access_token}` }
+        });
+        if (userInfoRes.ok) {
+          const profile = await userInfoRes.json();
+          email = profile.email || email;
+          name = profile.name || name;
+          photoURL = profile.picture || photoURL;
+        }
+      } catch (userErr) {
+        console.warn('Google userinfo fetch fallback:', userErr.message);
+      }
+    }
 
     if (!email) {
-      return res.status(400).json({ success: false, error: 'Email is required for social login.' });
+      return res.status(400).json({ success: false, error: 'Valid Google email is required for social login.' });
     }
 
     const { usersCollection } = getCollections();
@@ -156,6 +188,20 @@ router.post('/social-login', async (req, res) => {
       };
       const result = await usersCollection.insertOne(newUser);
       user = { ...newUser, _id: result.insertedId };
+    } else {
+      // Update photo or authProvider if not set
+      await usersCollection.updateOne(
+        { _id: user._id },
+        { 
+          $set: { 
+            authProvider: 'google',
+            ...(photoURL && { photoURL }),
+            ...(name && { name })
+          } 
+        }
+      );
+      if (name) user.name = name;
+      if (photoURL) user.photoURL = photoURL;
     }
 
     const token = jwt.sign(
