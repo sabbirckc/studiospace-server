@@ -225,9 +225,9 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 100,
     maxCapacity: 18,
     location: 'Mission District Arts District, San Francisco, CA',
-    imageUrl: '/image-1.png',
+    imageUrl: '/atelier-terracotta.jpg',
     gallery: [
-      '/image-1.png',
+      '/atelier-terracotta.jpg',
       '/image-3.jpg'
     ],
     amenities: [
