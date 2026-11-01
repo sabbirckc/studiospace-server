@@ -252,9 +252,9 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 100,
     maxCapacity: 16,
     location: 'Beacon Arts Loft, Boston, MA',
-    imageUrl: '/image-2.png',
+    imageUrl: '/atelier-lumiere.jpg',
     gallery: [
-      '/image-2.png',
+      '/atelier-lumiere.jpg',
       '/image-4.avif'
     ],
     amenities: [
