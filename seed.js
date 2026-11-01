@@ -198,9 +198,9 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 200,
     maxCapacity: 6,
     location: 'Capitol Hill Arts Quarter, Seattle, WA',
-    imageUrl: '/image-8.jpeg',
+    imageUrl: '/velvet-sound.jpg',
     gallery: [
-      '/image-8.jpeg',
+      '/velvet-sound.jpg',
       '/image-7.jpeg'
     ],
     amenities: [
