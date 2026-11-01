@@ -252,10 +252,10 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 100,
     maxCapacity: 16,
     location: 'Beacon Arts Loft, Boston, MA',
-    imageUrl: '/atelier-lumiere.jpg',
+    imageUrl: '/studio-4b-painting.jpg',
     gallery: [
-      '/atelier-lumiere.jpg',
-      '/image-4.avif'
+      '/studio-4b-painting.jpg',
+      '/atelier-lumiere.jpg'
     ],
     amenities: [
       'Heavy-Duty French Master Easels',
