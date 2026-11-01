@@ -171,9 +171,9 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 300,
     maxCapacity: 12,
     location: 'East Austin Creative Belt, Austin, TX',
-    imageUrl: '/image-7.jpeg',
+    imageUrl: '/resonance-studio.jpg',
     gallery: [
-      '/image-7.jpeg',
+      '/resonance-studio.jpg',
       '/image-8.jpeg'
     ],
     amenities: [
