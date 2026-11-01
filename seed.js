@@ -37,9 +37,9 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 200,
     maxCapacity: 20,
     location: 'West Loop Industrial Corridor, Chicago, IL',
-    imageUrl: '/image-2.png',
+    imageUrl: '/industrial-loft.jpg',
     gallery: [
-      '/image-2.png',
+      '/industrial-loft.jpg',
       '/image-1.png'
     ],
     amenities: [
