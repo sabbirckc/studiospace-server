@@ -22,3 +22,4 @@ export function verifyJWT(req, res, next) {
     });
   }
 }
+

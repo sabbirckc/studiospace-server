@@ -51,3 +51,4 @@ export const getCollections = () => {
     wishlistsCollection: database.collection('wishlists'),
   };
 };
+

@@ -270,3 +270,4 @@ router.delete('/:id', verifyJWT, async (req, res) => {
 });
 
 export default router;
+

@@ -112,3 +112,4 @@ router.delete('/:studioId', verifyJWT, async (req, res) => {
 });
 
 export default router;
+
