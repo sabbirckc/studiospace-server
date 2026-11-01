@@ -118,9 +118,9 @@ export const PREFERRED_STUDIOS = [
     securityDeposit: 150,
     maxCapacity: 8,
     location: 'SoHo Broadcast Commons, New York, NY',
-    imageUrl: '/image-5.png',
+    imageUrl: '/broadcast-suite.jpg',
     gallery: [
-      '/image-5.png',
+      '/broadcast-suite.jpg',
       '/image-6.jpeg'
     ],
     amenities: [
