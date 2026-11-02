@@ -12,11 +12,11 @@ import wishlistRoutes from './routes/wishlist.js';
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-// Allowed origins
-const allowedOrigins = [
-  'http://localhost:3000',
-  process.env.CLIENT_URL
-].filter(Boolean);
+// Allowed origins configured from .env
+const allowedOrigins = (process.env.CLIENT_URL || '')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
 
 app.use(cors({
   origin: (origin, callback) => {
